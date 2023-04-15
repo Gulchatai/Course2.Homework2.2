@@ -32,4 +32,18 @@ private  int transgressionDistance;
     public void setTransgressionDistance(int transgressionDistance) {
         this.transgressionDistance = transgressionDistance;
     }
+    public  int point(){
+        return magicPower + transgressionDistance;
+    }
+    public void bestHogwarts(Hogwarts hogwarts) {
+        if (this.point() < hogwarts.point()) {
+            System.out.println(hogwarts.getStudentName() + " лучший в Хогварц, чем "+ this.getStudentName());
+        }
+        if (this.point() > hogwarts.point()){
+            System.out.println(this.getStudentName() + " лучший в Хогварц, чем "+ hogwarts.getStudentName());
+        }
+        if (this.point() == hogwarts.point()){
+            System.out.println(this.getStudentName() + " и "+ hogwarts.getStudentName() + " в Хограрц равны по качествам");
+        }
+    }
 }

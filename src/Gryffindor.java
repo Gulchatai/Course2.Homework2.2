@@ -34,6 +34,21 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+    public  int point(){
+        return honor + nobleness + bravery;
+    }
+    public void bestGryffindor(Gryffindor gryffindor) {
+           if (this.point() < gryffindor.point()) {
+            System.out.println(gryffindor.getStudentName() + " лучший Гриффиндорец, чем "+ this.getStudentName());
+            }
+        if (this.point() > gryffindor.point()){
+            System.out.println(this.getStudentName() + " лучший Гриффиндорец, чем "+ gryffindor.getStudentName());
+        }
+        if (this.point() == gryffindor.point()){
+            System.out.println(this.getStudentName() + " и "+ gryffindor.getStudentName() + " равны по качествам");
+        }
+            }
+        }
 
 
-}
+
